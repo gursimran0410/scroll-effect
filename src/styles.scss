@@ -14,11 +14,13 @@ body{
     position: relative;
     width: 100%;
     text-align: center;
-    border-bottom: 1px solid #c34e37;
+    border-bottom: none;
+    transition: border-bottom 0.2s ease;
   }
   .pencil-text{
+    display: inline-block;
     position: relative;
-    font-size: 20px;
+    font-size: 25pt;
     transform: scale(12);
     bottom: 140px;
     top: auto;
