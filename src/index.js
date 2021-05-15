@@ -1,10 +1,25 @@
 import "./styles.scss";
 
-// document.getElementById("app").innerHTML = `
-// <h1>Hello Vanilla!</h1>
-// <div>
-//   We use the same configuration as Parcel to bundle this sandbox, you can find more
-//   info about Parcel
-//   <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.
-// </div>
-// `;
+let threshold = [];
+for (let tValue = 0.0; tValue <= 1.0; tValue = tValue + 0.01) {
+  threshold.push(tValue);
+}
+let options = {
+  root: null,
+  rootMargin: "0px",
+  threshold: threshold
+};
+
+let callback = (entries, observer) => {
+  entries.forEach((entry) => {
+    // document.querySelector(".pencil-text").style.transform = `scale(${
+    //   12 * entry.intersectionRatio
+    // })`;
+    // document.querySelector(".pencil-text").style.bottom = `${100}pt`;
+  });
+};
+
+let observer = new IntersectionObserver(callback, options);
+
+let target = document.querySelector(".cover-img");
+observer.observe(target);
