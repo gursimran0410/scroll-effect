@@ -1,9 +1,11 @@
 import "./styles.scss";
 
 let threshold = [];
+
 for (let tValue = 0.0; tValue <= 1.0; tValue = tValue + 0.01) {
   threshold.push(tValue);
-}
+};
+
 let options = {
   root: null,
   rootMargin: "0px",
