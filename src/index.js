@@ -30,7 +30,5 @@ let callback = (entries, observer) => {
 };
 
 let observer = new IntersectionObserver(callback, options);
-
 let target = document.querySelector(".cover-img");
-
 observer.observe(target);
